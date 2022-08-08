@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const ButtonWrapper = styled.button`
-    padding: 1rem;
-    display: inline-block;
     height: 480px;
     width: 300px;
     margin: 1rem;

@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-const ButtonWrapper = styled.button`
-    padding: 1rem;
-    display: inline-block;
-    height: 480px;
-    width: 300px;
-    margin: 1rem;
-`;
+const ButtonWrapper = styled.button``;
 
 const ButtonFetchUsers = (props) => {
     const { click } = props;

@@ -18,9 +18,14 @@ const UsersList = (props) => {
                 nametitle={user.name.title}
                 firstname={user.name.first}
                 lastname={user.name.lastname}
-                email={user.email}
-                imageurl={user.picture.large}
+                image={user.picture.large}
                 />
+                    <img src={user.picture.large} alt={user.name.last} />
+                    <h4>
+                        {user.name.title} {user.name.first} {user.name.last}
+                    </h4>
+                    <p>{user.email}</p>
+                </UserCard>
             ))}
         </UserListWrapper>
     );

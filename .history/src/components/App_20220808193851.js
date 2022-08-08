@@ -4,7 +4,7 @@ import ButtonFetchUsers from "./ButtonFetchUsers";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;

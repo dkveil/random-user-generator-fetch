@@ -19,7 +19,7 @@ const UsersList = (props) => {
                 firstname={user.name.first}
                 lastname={user.name.lastname}
                 email={user.email}
-                imageurl={user.picture.large}
+                image={user.picture.large}
                 />
             ))}
         </UserListWrapper>
