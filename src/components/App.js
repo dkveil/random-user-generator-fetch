@@ -5,15 +5,16 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-`;
+    height: 100vh;
+    padding: 0 2rem;
+`
 
 const API = "https://randomuser.me/api/";
 
-function App() {
+function App(){
     const [users, setUsers] = React.useState([]);
 
     const handleDataFetch = () => {
@@ -34,7 +35,6 @@ function App() {
 
     return (
         <Wrapper>
-            {console.log(users)}
             {users ? <UsersList users={users} /> : null}
             <ButtonFetchUsers click={handleDataFetch} />
         </Wrapper>
