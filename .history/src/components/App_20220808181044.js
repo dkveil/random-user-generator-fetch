@@ -16,10 +16,13 @@ function App() {
             }
             throw Error(res.status)
         })
-        .then(res => res.json())
-        .then(data => {
-            setUsers(data.results)
+        .then(res => {
+            console.log(res.json())
+            return res.json()
         })
+        // .then(data => {
+        //     // console.log(data)
+        // })
         .catch(error => console.log(error))
     }
 

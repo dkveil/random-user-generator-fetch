@@ -2,11 +2,11 @@ import React from "react";
 import UsersList from "./UsersList";
 import ButtonFetchUsers from "./ButtonFetchUsers";
 
-const API = 'https://randomuser.me/api/'
+const API = 'https://randomuser.me/api1/'
 
 function App() {
 
-    const [users, setUsers] = React.useState(null)
+  const [users, setUsers] = React.useState(null)
 
     const handleDataFetch = () => {
         fetch(API)
@@ -14,12 +14,9 @@ function App() {
             if(res.ok) {
                 return res
             }
-            throw Error(res.status)
+            throw Error("Error")
         })
-        .then(res => res.json())
-        .then(data => {
-            setUsers(data.results)
-        })
+        .then()
         .catch(error => console.log(error))
     }
 

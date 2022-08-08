@@ -6,7 +6,7 @@ const API = 'https://randomuser.me/api/'
 
 function App() {
 
-    const [users, setUsers] = React.useState(null)
+    const [users, setUsers] = React.useState([])
 
     const handleDataFetch = () => {
         fetch(API)
@@ -18,7 +18,11 @@ function App() {
         })
         .then(res => res.json())
         .then(data => {
-            setUsers(data.results)
+            const users2 = [...users, data]
+
+            setUsers(prev => ({
+                users2
+            }))
         })
         .catch(error => console.log(error))
     }
@@ -26,6 +30,7 @@ function App() {
     return (
         <div>
             <ButtonFetchUsers click={handleDataFetch}/>
+            {console.log(users)}
             {users ? <UsersList users={users}/> : null}
         </div>
     );

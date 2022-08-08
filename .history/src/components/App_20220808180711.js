@@ -16,10 +16,7 @@ function App() {
             }
             throw Error(res.status)
         })
-        .then(res => res.json())
-        .then(data => {
-            setUsers(data.results)
-        })
+        .then()
         .catch(error => console.log(error))
     }
 

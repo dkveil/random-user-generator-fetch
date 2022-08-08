@@ -12,14 +12,12 @@ function App() {
         fetch(API)
         .then(res => {
             if(res.ok) {
+                console.log(res)
                 return res
             }
             throw Error(res.status)
         })
         .then(res => res.json())
-        .then(data => {
-            setUsers(data.results)
-        })
         .catch(error => console.log(error))
     }
 

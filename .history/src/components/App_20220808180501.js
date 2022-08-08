@@ -2,7 +2,7 @@ import React from "react";
 import UsersList from "./UsersList";
 import ButtonFetchUsers from "./ButtonFetchUsers";
 
-const API = 'https://randomuser.me/api/'
+const API = 'https://randomuser.me/api1/'
 
 function App() {
 
@@ -16,10 +16,7 @@ function App() {
             }
             throw Error(res.status)
         })
-        .then(res => res.json())
-        .then(data => {
-            setUsers(data.results)
-        })
+        .then()
         .catch(error => console.log(error))
     }
 

@@ -18,7 +18,12 @@ function App() {
         })
         .then(res => res.json())
         .then(data => {
-            setUsers(data.results)
+            const users2 = [..., users]
+
+            setUsers(prev => ({
+                ...prev,
+                data
+            }))
         })
         .catch(error => console.log(error))
     }
@@ -26,6 +31,7 @@ function App() {
     return (
         <div>
             <ButtonFetchUsers click={handleDataFetch}/>
+            {console.log(users)}
             {users ? <UsersList users={users}/> : null}
         </div>
     );

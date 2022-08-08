@@ -6,7 +6,7 @@ const API = 'https://randomuser.me/api/'
 
 function App() {
 
-    const [users, setUsers] = React.useState(null)
+    const [users, setUsers] = React.useState([])
 
     const handleDataFetch = () => {
         fetch(API)

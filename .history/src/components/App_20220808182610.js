@@ -18,7 +18,12 @@ function App() {
         })
         .then(res => res.json())
         .then(data => {
-            setUsers(data.results)
+            console.log(data)
+
+            setUsers(prev => ({
+                ...prev,
+                data
+            }))
         })
         .catch(error => console.log(error))
     }

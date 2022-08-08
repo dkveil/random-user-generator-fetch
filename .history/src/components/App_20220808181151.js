@@ -16,9 +16,12 @@ function App() {
             }
             throw Error(res.status)
         })
-        .then(res => res.json())
+        .then(res => {
+            console.log(res.json());
+            return res.json()
+        })
         .then(data => {
-            setUsers(data.results)
+            console.log(data)
         })
         .catch(error => console.log(error))
     }
